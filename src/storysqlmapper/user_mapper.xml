@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feyn.story.dao.UserDao"><!--相应的DAO接口类-->
+    <!--select对应的方法、入参类型及返回值类型-->
+	<select id="getUserById" parameterType="java.util.Map"
+         resultType="com.feyn.story.entity.User">
+		<!--执行的sql语句-->
+        select
+        *
+        from
+        tUser
+        where
+        ID= #{ID}
+	</select>
+</mapper>
